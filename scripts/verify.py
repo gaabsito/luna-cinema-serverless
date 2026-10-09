@@ -6,7 +6,11 @@ root=Path(__file__).resolve().parents[1]
 state=json.loads((root/'scripts'/'state.json').read_text())
 def aws(service,operation,**kwargs):
  cmd=['aws',service,operation,'--region',state['region'],'--output','json','--no-cli-pager']
- for k,v in kwargs.items():cmd.extend(['--'+k.replace('_','-'),json.dumps(v) if isinstance(v,(dict,list)) else str(v)])
+ for k,v in kwargs.items():
+  cmd.append('--'+k.replace('_','-'))
+  if isinstance(v,bool):
+   if not v:cmd[-1]='--no-'+k.replace('_','-')
+  else:cmd.append(json.dumps(v) if isinstance(v,(dict,list)) else str(v))
  return json.loads(subprocess.check_output(cmd,text=True))
 def post(payload):
  request=urllib.request.Request(state['apiUrl'],data=json.dumps(payload).encode(),headers={'Content-Type':'application/json','Origin':'https://gaabsito.github.io'},method='POST')
@@ -18,7 +22,7 @@ code,result,cors=post(payload)
 assert code==201 and result['notified'] is True,(code,result)
 code2,result2,_=post(payload);assert code2==200 and result2['id']==id
 invalid,_,_=post({**payload,'email':'no-valido','requestId':str(uuid.uuid4())});assert invalid==400
-item=aws('dynamodb','get-item',table_name=state['table'],key={'id':{'S':id}},consistent_read=True) if False else json.loads(subprocess.check_output(['aws','dynamodb','get-item','--table-name',state['table'],'--key',json.dumps({'id':{'S':id}}),'--consistent-read','--region',state['region'],'--output','json'],text=True))
+item=aws('dynamodb','get-item',table_name=state['table'],key={'id':{'S':id}},consistent_read=True)
 assert item['Item']['notificationStatus']['S']=='sent'
 subscriptions=aws('sns','list-subscriptions-by-topic',topic_arn=state['topicArn'])['Subscriptions']
 confirmed=any(s['SubscriptionArn']!='PendingConfirmation' for s in subscriptions);assert confirmed

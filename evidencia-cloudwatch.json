@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "timestamp": 1791538730944,
+      "message": "2026-10-09T09:38:50.944Z\t6516087b-fd3d-40ea-9ca4-2079ef07ae2b\tINFO\t{\"event\":\"signup_completed\",\"id\":\"7b5f0ea0-349f-44fb-8bfe-734f092a1cd6\",\"awsRequestId\":\"6516087b-fd3d-40ea-9ca4-2079ef07ae2b\",\"snsMessageId\":\"742fad2f-7df2-5ef3-ae40-ce6dc59898c7\"}\n"
+    },
+    {
+      "timestamp": 1791538758224,
+      "message": "2026-10-09T09:39:18.224Z\tc6775a93-8903-49b8-aa96-d2f5008c61d9\tINFO\t{\"event\":\"signup_completed\",\"id\":\"ac3df5e5-8e22-4b37-86fc-c471bb97c3ba\",\"awsRequestId\":\"c6775a93-8903-49b8-aa96-d2f5008c61d9\",\"snsMessageId\":\"425d1ce8-d162-5ed8-a0f6-7faa69e40d6f\"}\n"
+    },
+    {
+      "timestamp": 1791538829144,
+      "message": "2026-10-09T09:40:29.144Z\tc37e3277-af86-42a9-83cf-6d3712491e10\tINFO\t{\"event\":\"signup_completed\",\"id\":\"6149c13e-d112-4e81-9930-55bfef7968a4\",\"awsRequestId\":\"c37e3277-af86-42a9-83cf-6d3712491e10\",\"snsMessageId\":\"e73cd915-24fc-5332-8980-ba579c31406d\"}\n"
+    }
+  ]
+}

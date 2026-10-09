@@ -40,6 +40,11 @@
     }
   },
   "snsSubscriptionConfirmed": true,
-  "logs": [],
-  "emailReceipt": "Pendiente de comprobar por el destinatario"
+  "logs": [
+    {
+      "timestamp": 1791538730944,
+      "message": "2026-10-09T09:38:50.944Z\t6516087b-fd3d-40ea-9ca4-2079ef07ae2b\tINFO\t{\"event\":\"signup_completed\",\"id\":\"7b5f0ea0-349f-44fb-8bfe-734f092a1cd6\",\"awsRequestId\":\"6516087b-fd3d-40ea-9ca4-2079ef07ae2b\",\"snsMessageId\":\"742fad2f-7df2-5ef3-ae40-ce6dc59898c7\"}\n"
+    }
+  ],
+  "emailReceipt": "Confirmado por Gabriel: ha recibido los correos SNS en su correo."
 }

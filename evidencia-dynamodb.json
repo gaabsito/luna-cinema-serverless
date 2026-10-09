@@ -1,0 +1,92 @@
+{
+  "Items": [
+    {
+      "notificationStatus": {
+        "S": "sent"
+      },
+      "expiresAt": {
+        "N": "1794130757"
+      },
+      "createdAt": {
+        "S": "2026-10-09T09:39:17.605Z"
+      },
+      "snsMessageId": {
+        "S": "425d1ce8-d162-5ed8-a0f6-7faa69e40d6f"
+      },
+      "email": {
+        "S": "s3@example.com"
+      },
+      "id": {
+        "S": "ac3df5e5-8e22-4b37-86fc-c471bb97c3ba"
+      },
+      "name": {
+        "S": "Prueba Web S3"
+      },
+      "consent": {
+        "BOOL": true
+      },
+      "interest": {
+        "S": "familia"
+      }
+    },
+    {
+      "notificationStatus": {
+        "S": "sent"
+      },
+      "expiresAt": {
+        "N": "1794130828"
+      },
+      "createdAt": {
+        "S": "2026-10-09T09:40:28.523Z"
+      },
+      "snsMessageId": {
+        "S": "e73cd915-24fc-5332-8980-ba579c31406d"
+      },
+      "email": {
+        "S": "pages@example.com"
+      },
+      "id": {
+        "S": "6149c13e-d112-4e81-9930-55bfef7968a4"
+      },
+      "name": {
+        "S": "Prueba Web GitHub Pages"
+      },
+      "consent": {
+        "BOOL": true
+      },
+      "interest": {
+        "S": "descubrimientos"
+      }
+    },
+    {
+      "notificationStatus": {
+        "S": "sent"
+      },
+      "expiresAt": {
+        "N": "1794130729"
+      },
+      "createdAt": {
+        "S": "2026-10-09T09:38:49.808Z"
+      },
+      "snsMessageId": {
+        "S": "742fad2f-7df2-5ef3-ae40-ce6dc59898c7"
+      },
+      "email": {
+        "S": "cine@example.com"
+      },
+      "id": {
+        "S": "7b5f0ea0-349f-44fb-8bfe-734f092a1cd6"
+      },
+      "name": {
+        "S": "Prueba API Luna Cinema"
+      },
+      "consent": {
+        "BOOL": true
+      },
+      "interest": {
+        "S": "clasicos"
+      }
+    }
+  ],
+  "Count": 3
+}

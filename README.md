@@ -18,7 +18,12 @@ flowchart LR
 
 ## Enlaces de entrega
 
-Las cuatro URL se guardan en `entrega.json` después del despliegue. El endpoint también está en `web/config.js`: es público y **no es una credencial**.
+- [Web GitHub Pages](https://gaabsito.github.io/luna-cinema-serverless/)
+- [Repositorio GitHub](https://github.com/gaabsito/luna-cinema-serverless)
+- [Endpoint API Gateway · POST](https://2sy46otto8.execute-api.us-west-2.amazonaws.com/inscripciones)
+- [Web Amazon S3](http://luna-cinema-gabriel-793629871707-us-west-2.s3-website-us-west-2.amazonaws.com)
+
+El endpoint también está en `web/config.js`: es público y **no es una credencial**.
 
 ## Estructura
 
@@ -90,3 +95,11 @@ python3 -m http.server 4173 --directory web
 Para demostrar la entrega se debe probar el formulario **publicado**, localizar el mismo `id` en DynamoDB, ver `notificationStatus: sent` y `snsMessageId`, localizar la invocación en CloudWatch y comprobar el correo SNS recibido con ese `id`. Un resultado correcto de `SNS Publish` acredita aceptación por el servicio; la suscripción confirmada y el email recibido acreditan la entrega al destinatario. Usar datos ficticios en las pruebas.
 
 Este proyecto incluye una propuesta de programación, sin fechas, precios o películas inventados como si fueran un evento real.
+
+## Resultado verificado · 9 de octubre de 2026
+
+Las seis pruebas automatizadas pasan. Se han enviado tres inscripciones ficticias reales: una desde la API, una desde S3 y una desde GitHub Pages. Las tres constan en DynamoDB con `notificationStatus: sent`, identificador SNS y ejecución correspondiente en CloudWatch. El reintento devuelve 200 sin duplicar el registro y un email inválido devuelve 400. La suscripción SNS está confirmada y Gabriel ha confirmado la recepción de los correos. Se ha probado la vista móvil a 390 píxeles, sin desbordamiento horizontal.
+
+El formulario oficial de entrega se ha enviado con Gabriel Galán García, grupo 2SI y las cuatro URL. Google Forms muestra «¡Misión entregada correctamente!».
+
+Evidencias: [API](evidencia-api.json), [DynamoDB](evidencia-dynamodb.json), [CloudWatch](evidencia-cloudwatch.json), [formulario S3](evidencia-s3.jpg), [formulario GitHub Pages](evidencia-pages.jpg) y [confirmación de entrega](entrega-confirmada.jpg). Los registros compartidos contienen exclusivamente datos ficticios de prueba.
