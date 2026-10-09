@@ -1,0 +1,45 @@
+{
+  "testedAt": "2026-10-09T09:38:59.160540+00:00",
+  "requestId": "7b5f0ea0-349f-44fb-8bfe-734f092a1cd6",
+  "postStatus": 201,
+  "retryStatus": 200,
+  "invalidEmailStatus": 400,
+  "corsOrigin": "https://gaabsito.github.io",
+  "apiResponse": {
+    "id": "7b5f0ea0-349f-44fb-8bfe-734f092a1cd6",
+    "notified": true,
+    "message": "Inscripción guardada y notificación publicada."
+  },
+  "dynamoItem": {
+    "consent": {
+      "BOOL": true
+    },
+    "createdAt": {
+      "S": "2026-10-09T09:38:49.808Z"
+    },
+    "email": {
+      "S": "cine@example.com"
+    },
+    "expiresAt": {
+      "N": "1794130729"
+    },
+    "id": {
+      "S": "7b5f0ea0-349f-44fb-8bfe-734f092a1cd6"
+    },
+    "interest": {
+      "S": "clasicos"
+    },
+    "name": {
+      "S": "Prueba API Luna Cinema"
+    },
+    "notificationStatus": {
+      "S": "sent"
+    },
+    "snsMessageId": {
+      "S": "742fad2f-7df2-5ef3-ae40-ce6dc59898c7"
+    }
+  },
+  "snsSubscriptionConfirmed": true,
+  "logs": [],
+  "emailReceipt": "Pendiente de comprobar por el destinatario"
+}

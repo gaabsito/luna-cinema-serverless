@@ -1,0 +1,8 @@
+{
+  "nombre": "Gabriel Galán García",
+  "grupo": "2SI",
+  "githubPages": "https://gaabsito.github.io/luna-cinema-serverless/",
+  "repositorio": "https://github.com/gaabsito/luna-cinema-serverless",
+  "apiGateway": "https://2sy46otto8.execute-api.us-west-2.amazonaws.com/inscripciones",
+  "amazonS3": "http://luna-cinema-gabriel-793629871707-us-west-2.s3-website-us-west-2.amazonaws.com"
+}
