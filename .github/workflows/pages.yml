@@ -1,4 +1,4 @@
-name: Publicar Luna Cinema
+name: Subir la web de Luna Cinema
 on:
   push:
     branches: [main]
@@ -12,20 +12,25 @@ concurrency:
   cancel-in-progress: true
 jobs:
   deploy:
+    name: Comprobar que funciona y subir la web
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Comprobar backend
+      - name: Descargar el código
+        uses: actions/checkout@v4
+      - name: Comprobar que el formulario funciona
         run: |
           node --check backend/index.mjs
           node --check web/app.js
           node --test tests/backend.test.mjs
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Preparar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Dejar los archivos listos para subir
+        uses: actions/upload-pages-artifact@v3
         with:
           path: web
-      - id: deployment
+      - name: Subir la web a GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
