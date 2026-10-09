@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.aws/
+*credentials*
+node_modules/
+work/
+*.zip
+__pycache__/
+scripts/state.json
